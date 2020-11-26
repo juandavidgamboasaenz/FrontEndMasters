@@ -1,0 +1,67 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+h1
+
+
+.div-margin {
+
+    margin: 0;
+}
+
+
+.image{
+    margin: 0;
+    float: left;
+    width: 20%;
+    border: 5px solid #7c8e88;
+
+    clear: none;
+}
+
+nav{
+    border: 3px solid rebeccapurple;
+}
+
+nav ul{
+    list-style-type: none;
+    border: 3px solid red;
+    margin: 0;
+    padding: 0;
+}
+
+nav li{
+    border: 3px solid black;
+    width: auto;
+    display: inline;
+    padding: 0 1%;
+    margin: 0 0.05rem;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.alien-photo{
+    margin: 0;
+}
+
+.bottom-hr {
+    height:2px;
+    border-width:0;
+    color:#a61f11;background-color: #a61f11;
+}
+
+.top-hr {
+    height:2px;
+    border-width:0;
+    columns: #da0090;background-color: #da0090;
+}
+
+.border{
+    border: 3px solid red;
+
+}
