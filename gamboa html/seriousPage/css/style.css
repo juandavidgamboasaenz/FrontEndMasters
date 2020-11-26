@@ -65,3 +65,38 @@ nav li{
     border: 3px solid red;
 
 }
+.articletitle{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: brown;
+    margin-bottom: 2%;
+}
+.margin{
+    margin: 3%;
+}
+.marginBottom{
+    margin-bottom: 5%;
+}
+.border{
+    border: solid red
+}
+.floatLeft{
+    float: left;
+    margin-right: 2%;
+    border-radius: 10%;
+}
+.floatRight{
+    float: right;
+}
+.postedText{
+    color: green;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.readMoreText{
+    color: salmon;
+    font-family: 'Times New Roman', Times, serif
+}
+.bottomLine{
+    color: red;
+    margin-left: 3%;
+    margin-right: 3%;
+}
