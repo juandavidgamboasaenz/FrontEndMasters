@@ -70,3 +70,14 @@ div{
 a, strong, em{
     border: 2px solid blue;
 }
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+li {
+    border: 3px solid blue;
+}
