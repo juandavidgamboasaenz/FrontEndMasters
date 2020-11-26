@@ -3,43 +3,82 @@ body{
 }
 
 
-h1
+header {
+    height: 220px;
+    border: 0px solid green;
+    margin-right: 5%;
+    margin-left: 10%;
 
-
-.div-margin {
-
-    margin: 0;
 }
 
+header div{
+    padding-bottom: 50px;
+}
 
-.image{
-    margin: 0;
+header h1{
+    padding-top: 5%;
+    margin-left: 37.5%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+header p{
+    margin-left: 32.5%;
+    padding-left: 5%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+}
+
+.tittleImage{ 
     float: left;
-    width: 20%;
-    border: 5px solid #7c8e88;
-
+    border: 0px solid #7c8e88;
     clear: none;
+    margin-left: 25%; 
+    margin-bottom: 3%;
 }
 
 nav{
-    border: 3px solid rebeccapurple;
+    border: 0px solid rebeccapurple;
+    margin-top: 2%;
+    margin-right: 5%;
+    margin-left: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+
 }
 
 nav ul{
     list-style-type: none;
-    border: 3px solid red;
+    border: 0px solid red;
+    margin: 0;
+    padding: 0;
+    display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+}
+
+div nav ul{
+    display: inline;
+    padding: 0 1%;
+    margin: 25% 0%;
+}
+
+
+nav li{
+    border: 0px solid palevioletred;
+    width: auto;
+    display: inline-block;
+    padding: 0 1%;
+    margin: 0.05rem 3%;
+}
+
+footer ul{
+    list-style-type: none;
+    display: flex;
     margin: 0;
     padding: 0;
 }
-
-nav li{
-    border: 3px solid black;
-    width: auto;
-    display: inline;
-    padding: 0 1%;
-    margin: 0 0.05rem;
-}
-
 .wrapper {
     width: 80%;
     margin: 0 auto;
@@ -63,19 +102,43 @@ nav li{
 
 .border{
     border: 3px solid red;
-
 }
+
 .articletitle{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: brown;
     margin-bottom: 2%;
 }
+
+
 .margin{
-    margin: 3%;
+    margin: 2%;
 }
 .marginBottom{
     margin-bottom: 5%;
+    margin-right: 10%;
+    margin-left: 17.5%;
 }
+
+.marginTop{
+    margin-top: 5%;
+
+}
+
+.marginP{
+    margin-top: 30px;
+
+    margin-bottom: 0px;
+    margin-right: 40.5%;
+    margin-left: 47.5%;
+}
+
+.marginPlanet ul {
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: 43.75%;
+}
+
 .border{
     border: solid red
 }
