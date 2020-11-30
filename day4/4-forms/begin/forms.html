@@ -10,42 +10,86 @@
 		<section>
 			<h1>Alien Abduction Order Form</h1>
 			<p>Fill out the form below to place an order for an alien abduction by one of our fine UFOs.</p>
-			<form>
+			<!-- Conexión con el back end, POST que se hace a las bd-->
+			<form action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES" method="POST">
+				<!-- parametros que se piden para enviar a la bd, para mas info visitar  https://frontendmasters.github.io/bootcamp/forms en la sección <input type= "hiden"> -->
+
+				<input type="hidden"  name="send_to" value="juan.gamboa@correo.usa.edu.co">
+
 				<fieldset>			
-				<legend>Your contact information</legend>
-				<label for = "firstName">Your <strong>first</strong> name</label>
-				<!-- Input for names-->
-				<input type="text" name="firstName" id="firstName">
-				<label for= "secondName">Your <strong>second</strong> name</label>
-				<input type="text" name="secondName" id="secondName">
-				<label for="phone">Phone Number</label>
-				<!-- input for telephone -->
-				<input type="tel" name="phoneNumber" id="phoneNumber">
-				<!-- input for email-->
-				<label for="email">Email</label>
-				<input type="email" name="email" id="email">
+					<!-- Leyend for the fieldset information -->
+					<legend>Your contact information</legend>
+										
+					<!-- Input for names-->
+					<label for = "name">Your name</label>
+					<input type="text" name="name" id="name">
+
+					<!-- input for telephone -->
+					<label for="phone">Phone Number</label>
+					<input type="tel" name="phone" id="phone">
+
+					<!-- input for email-->
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email">
+				</fieldset>					
+				<h2>About your abduction </h2>
+				<fieldset>
+					<legend>Abduction information</legend>	
+					<!-- input for date-->
+					<label for="date">Requested date</label>
+					<input type="date" name="date" id="date">
+					<!-- Input for fixed number values-->
+					<label for = qty>How many people would you like abducted?</label>
+					<input type="number" name="qty" id="qty" min="1" max="10">
+					<p>What type of UFO do you prefer?</p>
+						<!-- En este caso no se requiere un id, se usará javascript para esto-->
+						<!-- Para la sellección de un mísmo tipo el name debe ser el mismo 	 -->
+						<label>
+							<input type="radio" name="ufotype" value="classic" checked>
+							Classic oval UFO
+						</label>
+						<label >
+							<input type="radio" name="ufotype" value="starwars">
+							Star Wars-style Imperial cruiser
+						</label>
+						<label>
+							<input type="radio" name="ufotype" value="battlestar">
+							Battlestar Galactica-style Viper
+						</label>
+						<label>
+							<input type="radio" name="ufotype" value="borgcube">
+							Borg-style cube
+						</label>	
+								
+						<label class = "labelselect" for="abtype">What type of abduction experience do you want?</label>
+							<select name="abtype" id="abtype">	
+								<option selected>Select option...</option>
+								<option value="tour">Tour of the solar system</option>
+								<option value="dinner">Alien dinner and discussion</option>
+								<option value="dance">Alien dance lessons</option>
+								<option value="whale">Whale watching</option>
+							</select>
+					<label for="comments">Special requests:</label>
+					<textarea name="comments" id="comments"  placeholder="Ingresa cualquier petición especial que tengas... "></textarea>
+					<!-- Recordar que id es utilizado para interconexión con un backend-->
+					<label for="subscribe">					
+						<input type="checkbox" value="subscribe" name="subscribe" id="subscribe" checked> Add me to your email list!!
+					</label>
 				</fieldset>
-				
-			<h2>About your abduction </h2>
-			<p>Requested  date</p>
-			<p>How many people would you like abducted?</p>
-			<p>What type of UFO do you prefer?</p>
-				<ul>
-					<li>Classic oval UFO</li>
-					<li>Star Wars-style Imperial cruiser</li>
-					<li>Battlestar Galactica-style Viper</li>
-					<li>Borg-style cube</li>
-				</ul> 
-			<p>What type of abduction experience do you want?</p>
-				<ul>
-					<li>Tour of the solar system</li>
-					<li>Alien dinner and discussion</li>
-					<li>Alien dance lessons</li>
-					<li>Whale watching</li>
-				</ul>
-			<p>Special requests:</p>
-			<p>Add me to your email list</p>
-			</form>				
+				<!-- botón para añadir datos necesarios-->
+				<button type="submit">Order your abduction experience !!!</button>
+
+			</form>		
+			
+			<article>
+				My Bonnie lies over the ocean.
+
+				My Bonnie lies over the sea.
+			  
+				My Bonnie lies over the ocean.
+			  
+				Oh, bring back my Bonnie to me.
+			</article>
 		</section>
 		<aside>
 			<h3>Our Location</h3>
@@ -57,6 +101,7 @@
 			</address>
 		</aside>
 	</div>
+	<script src="js/forms.js"></script>
 </body>
 </html>
 
