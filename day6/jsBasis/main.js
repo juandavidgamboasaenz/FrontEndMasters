@@ -243,5 +243,109 @@ console.log(name.substr(6, 3));
 console.log(name.substr(4));
 console.log(name.substr(1, 3));
 
-//quiz exercise 
+//Objects and Arrays 
 
+const person = {
+    name: "David",
+    lastName: "Gamboa",
+    state: "Cundinamarca",
+    favoriteFood: "Fideos",
+    wantsFideosRigthNow: true,
+    numberOfFideosWanted: 100
+};
+
+console.log(person);
+console.log(person.name);
+console.log(person["name"]);
+
+const person1 = {
+    name: "Brian", 
+    ageRange: "25-35"
+};
+
+const person2 = {
+    name: "Jack",
+    ageRange: "65"
+};
+
+
+//Object
+
+function suggestMusic(person){
+    if(person.ageRange==="25-35"){
+        console.log("We think you'll like Daft Punk crazy millenial");
+    } else if( person.ageRange==="65-75"){
+        console.log("You're obviosly going to like Johny Cash. He walks the line");
+    } else  {
+        console.log("Uh, maybe try David Bowie? everyone lokes David Bowie");
+    }
+}
+
+suggestMusic(person1);
+suggestMusic(person2);
+
+//Method
+
+const dog = {
+    name: "dog",
+
+    //Tambien puedes escribir     speak: function(){
+
+    speak(someParameter){
+    console.log("woof woof", someParameter);
+    }
+};
+
+dog.speak('lol');
+
+//Object
+
+const me = {
+
+    nameMe: {
+        first: "David",
+        last: "Gamboa"
+    },
+ 
+    location: {
+        city: "Bogotá D.C",
+        state: "Cundinamarca",
+        country: "Colombia"
+    }
+};
+
+console.log(me);
+console.log(me.nameMe.first);
+
+//context 
+
+const me2 = {
+
+    name: {
+        first: "David",
+        last: "Gamboa",
+        logMeOut() { console.log(this) }
+    },
+
+    location: {
+        calleNumber: "7A",
+        carreraNumber: "69C",
+        city: "Bogotá D.C.",
+        state: "Cundinamarca",
+        zipCode: 110831,
+        country: "Colombia"
+    },
+//this. en este contexto representa el objeto en el que nos encontramos: me2
+    getAddress(){
+        return `${this.name.first} ${this.name.last} ${this.location.calleNumber} ${this.location.carreraNumber} ${this.location.state} ${this.location.zipCode} ${this.location.country}`;
+    }
+};
+
+console.log(me2.getAddress());
+console.log(me2.name.logMeOut());
+
+me2.name.first = 'Niki'
+
+console.log(this === window);
+console.log(this.scrollY);
+console.log(window.scrollY);
